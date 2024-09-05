@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define the character set and page title -->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>cruds</title>
+</head>
+<body>
+    <!-- Main container for all content -->
+    <div class="cruds">
+    
+        <!-- Header section -->
+        <div class="head">
+            <h1>cruds</h1>
+            <h3>product management system</h3>
+        </div>
+
+        <!-- Input section -->
+        <div class="inputs">
+            <!-- Input for product title -->
+            <input type="text" placeholder="title" id="title">
+            
+            <!-- Pricing section -->
+            <div class="price">
+                <!-- Input for product price -->
+                <input onkeyup="gettotal()" type="number" id="price" placeholder="price">
+                <!-- Input for product taxes -->
+                <input onkeyup="gettotal()" type="number" id="taxes" placeholder="taxes">
+                <!-- Input for additional ads cost -->
+                <input onkeyup="gettotal()" type="number" id="ads" placeholder="ads">
+                <!-- Input for discount amount -->
+                <input onkeyup="gettotal()" type="number" id="discount" placeholder="discount">
+                <!-- Display the total price -->
+                <small id="total"></small>
+            </div>
+
+            <!-- Input for product count and category -->
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+            <!-- Button to create product -->
+            <button id="submit">create</button>
+        </div>
+
+        <!-- Search section -->
+        <div class="outbuts">
+            <div class="searchblock">
+                <!-- Input for search -->
+                <input type="text" id="search" placeholder="search" onkeyup="searchdata(this.value)">
+                <div class="btnsearch">
+                    <!-- Button to search by title -->
+                    <button onclick="getsearchmood(this.id)" id="searchtitle">search by title</button>
+                    <!-- Button to search by category -->
+                    <button onclick="getsearchmood(this.id)" id="searchcategory">search by category</button>
+                                    </div>
+            </div>
+        </div>
+
+        <!-- Container for delete all button -->
+        <div id="deleteall"></div>
+
+        <!-- Table to display products -->
+<table>
+    <!-- Table header -->
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Taxes</th>
+            <th>Ads</th>
+            <th>Discount</th>
+            <th>Total</th>
+            <th>Category</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    
+    <!-- Table body -->
+    <tbody id="tbody">
+
+    </tbody>
+</table>
+
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="travel.js"></script>
+</body>
+</html>
+
